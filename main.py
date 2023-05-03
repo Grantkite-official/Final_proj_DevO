@@ -20,11 +20,4 @@ if __name__ == "__main__":
     game = g2.CollegeAdmissionsGame(colleges,students)
     game.run()
 
-
-
-class Gamecalc:
-    
-    def __init__(self):
-        self.playAMatrix = pa.Player()
-        self.playBMatrix = pa.Player()
         
