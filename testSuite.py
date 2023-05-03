@@ -12,7 +12,7 @@ class TestPDG(unittest.TestCase):
         game = PDG(2)
 
         # Mock user input for each round of the game
-        with patch('builtins.input', side_effect=['c', 'c', 'd', 'd']):
+        with patch('builtins.input', side_effect=['c', 'c', 'c', 'c','c', 'c', 'c', 'c']):
             game.play_game(player1, player2)
 
         # Assert that players' scores have been updated correctly
@@ -44,7 +44,8 @@ class TestPlayer(unittest.TestCase):
          player1 = Player("Alice", 2, [-1, -3, 0, -2])
          player2 = Player("Bob", 2, [-1, 0, -3, -2])
          game1 = PDG(2) 
-         game1.play_game(player1, player2)
+         with patch('builtins.input', side_effect=['c', 'c', 'c', 'c','c', 'c', 'c', 'c']):
+            game1.play_game(player1, player2)
          player1.payout = -1
          player2.payout = -1
          assert player1.payout == -1
@@ -90,7 +91,8 @@ class TestPlayer(unittest.TestCase):
          player1 = Player("Alice", 2, [-1, -3, 0, -2])
          player2 = Player("Bob", 2, [-1, 0, -3, -2])
          game1 = PDG(2) 
-         game1.play_game(player1, player2)
+         with patch('builtins.input', side_effect=['c', 'c', 'c', 'c','c', 'c', 'c', 'c']):
+            game1.play_game(player1, player2)
 
          mit = College("MIT", 2, ["Alice", "Bob", "Charlie"])
          harvard = College("Harvard", 2, ["Bob", "Alice", "Charlie"])
@@ -119,7 +121,8 @@ class TestPDG(unittest.TestCase):
         self.pdg = PDG(2)
 
     def test_play_game(self):
-          self.pdg.play_game(self.player1, self.player2)
+          with patch('builtins.input', side_effect=['c', 'c', 'c', 'c','c', 'c', 'c', 'c']):
+            self.pdg.play_game(self.player1, self.player2)
           self.player1.payout = 0
           self.player2.payout = 0
           self.assertEqual(self.player1.payout, 0)
