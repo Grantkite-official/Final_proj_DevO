@@ -2,5 +2,5 @@ Version control and documentation is done through Github
 The Patch branch was used as the development branch
 automatic testing and coverage checking is completed through Github Actions
 Activated upon a successful push, code coverage can be checked through Actions -> Python Package
-Building and Packaging into a Zip File is done through Github and Github Actions
+Building and Packaging into a Zip File is done through Github and Github Actions and Jekyll
 Deployment is done through Github Pages
