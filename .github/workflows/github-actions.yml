@@ -38,13 +38,3 @@ jobs:
         run: |
           cmd.exe /c start cmd.exe /k "python main.py && pause"
           
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Build package
-        
-      - name: Archive code
-        uses: montudor/action-zip@v1
-        with:
-          files: dist/
-          name: code
